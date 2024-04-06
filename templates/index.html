@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Color Palettes</title>
+  <link rel="icon" type="image/png" href="/images/tab_bar_icon.png"> <!-- Specify the path to your icon image -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <link rel="stylesheet" href="/Static/styles.css">
+</head>
+
+<body>
+  <section id="home" class="parallax">
+    <div class="container">
+      <h1>Welcome to Color Palettes</h1>
+      <p>Explore beautiful color palettes generated randomly or based on specific categories.</p>
+      <a href="#design-color-custom" class="btn">Explore</a>
+    </div>
+  </section>
+
+
+  <hr class="divider"> <!-- Line divider -->
+  <section id="design-color-custom" class="custom-palette-container">
+    <h1>
+      Design Custom Color
+      <span id="instruction-symbol">ℹ️</span> <!-- Instruction symbol -->
+    </h1>
+    <div class="custom-color" id="mixed-color-custom"></div>
+    <div class="slider-container-custom">
+      <label for="red-slider-custom" class="custom-label">Red:</label>
+      <input type="range" min="0" max="255" value="0" class="slider-custom" id="red-slider-custom">
+      <label for="green-slider-custom" class="custom-label">Green:</label>
+      <input type="range" min="0" max="255" value="0" class="slider-custom" id="green-slider-custom">
+      <label for="blue-slider-custom" class="custom-label">Blue:</label>
+      <input type="range" min="0" max="255" value="0" class="slider-custom" id="blue-slider-custom">
+      <label for="opacity-slider-custom" class="custom-label">Opacity:</label>
+      <input type="range" min="0" max="1" step="0.1" value="1" class="slider-custom" id="opacity-slider-custom">
+    </div>
+    <h1>Search your Fav Color</h1>
+    <div class="custom-color-code" id="color-code-custom"></div>
+    <div class="search-bar">
+      <input type="text" id="color-search-input" placeholder="Enter color code or name">
+      <button id="color-search-button">Search</button>
+    </div>
+    <div id="searched-color-preview"></div>
+    <!-- Modal Popup -->
+    <div id="instruction-modal" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <h3>Instructions:</h3>
+        <div class="instruction-text">
+          <p>Follow these steps to use this section:</p>
+          <ul>
+            <li>Adjust the sliders to choose the desired color.</li>
+            <li>Click on the color preview to copy the color code to the clipboard.</li>
+            <li>Enter a color code or name in the search bar to preview a specific color.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+  <hr class="divider"> <!-- Line divider -->
+  <section id="color-palettes">
+    <div class="container">
+      <h1>Combination of Colors</h1>
+      <div class="palette-container"></div>
+      <button class="generate-more">Generate More</button>
+    </div>
+  </section>
+  <hr class="divider"> <!-- Line divider -->
+  <section id="color-palettes">
+    <div class="container">
+
+      <h1>Color Palettes</h1>
+      <div class="category-buttons">
+        <button class="category-button active " data-category="all">All</button>
+        <button class="category-button" data-category="tint">Tint</button>
+        <button class="category-button" data-category="shade">Shade</button>
+        <button class="category-button" data-category="tone">Tone</button>
+        <button class="category-button" data-category="pastel">Pastel</button>
+        <button class="category-button" data-category="vibrant">Vibrant</button>
+        <button class="category-button" data-category="neutral">Neutral</button>
+        <button class="category-button" data-category="earthy">Earthy</button>
+        <button class="category-button" data-category="monochrome">Monochrome</button>
+        <button class="category-button" data-category="analogous">Analogous</button>
+        <button class="category-button" data-category="complementary">Complementary</button>
+        <button class="category-button" data-category="triadic">Triadic</button>
+      </div>
+      <!-- Scroll to top arrow -->
+      <div id="scrollToTopButton" class="scroll-button scroll-to-top-button">
+        <i class="fas fa-chevron-up"></i>
+      </div>
+
+      <div id="scrollToBottomButton" class="scroll-button scroll-to-bottom-button">
+        <i class="fas fa-chevron-down"></i>
+      </div>
+
+
+      <div id="palettes-container"></div>
+      <button id="generate-button">Generate More Palettes</button>
+    </div>
+  </section>
+  <hr class="divider"> <!-- Line divider -->
+
+
+
+
+
+
+
+
+
+
+  <footer>
+    <div class="container1">
+      <div class="footer-info">
+        <h3>Get in Touch</h3>
+        <p>If you have any questions, feel free to reach out to us!</p>
+        <ul class="contact-info">
+          <li><i class="fas fa-map-marker-alt"></i> Raichur, Karnataka, India</li>
+          <li><i class="fas fa-phone"></i> +91 9113808288</li>
+          <li><i class="fas fa-envelope"></i> vasughanta@gmail.com</li>
+        </ul>
+      </div>
+      <div class="footer-links">
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#design-color-custom">Design custom color</a></li>
+          <li><a href="#custom-color-code">Search Color</a></li>
+          <li><a href="#color-palettes">Combo Color</a></li>
+          <li><a href="#color-palettes">Color Palettes</a></li>
+          <!-- Add more links as needed -->
+        </ul>
+      </div>
+      <div class="footer-social">
+        <h3>Follow Us</h3>
+        <ul class="social-icons">
+          <li><a href="https://github.com/Vasu657"><i class="fab fa-github"></i></a></li>
+          <li><a href="https://medium.com/@vasu_ghanta"><i class="fab fa-medium"></i></a></li>
+          <li><a href="https://www.linkedin.com/in/vasu-g/"><i class="fab fa-linkedin-in"></i></a></li>
+          <!-- Add more social icons as needed -->
+        </ul>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/Static/script.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/tinycolor/1.4.2/tinycolor.min.js"></script>
+</body>
+
+</html>
